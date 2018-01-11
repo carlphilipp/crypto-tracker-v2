@@ -1,0 +1,16 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'cph.application'
+
+dependencies {
+	// This dependency is exported to consumers, that is to say found on their compile classpath.
+	api 'org.apache.commons:commons-math3:3.6.1'
+	//api project(':core')
+
+	// This dependency is used internally, and not exposed to consumers on their own compile classpath.
+	implementation 'com.google.guava:guava:23.0'
+	implementation project(':core')
+
+	// Use JUnit test framework
+	testImplementation 'junit:junit:4.12'
+}
