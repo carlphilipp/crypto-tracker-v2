@@ -1,10 +1,12 @@
 package org.cph.crypto.core.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class User {
 	private String id;
 	private String email;
+	private String password;
 	private Role role;
 	private Currency currency;
 	private double liquidityMovement;
@@ -13,7 +15,7 @@ public class User {
 	private double originalValue;
 	private double gain;
 	private double gainPercentage;
-	private List<Position> position;
+	private List<Position> positions = new ArrayList<>();
 
 	public String getId() {
 		return id;
@@ -95,11 +97,19 @@ public class User {
 		this.gainPercentage = gainPercentage;
 	}
 
-	public List<Position> getPosition() {
-		return position;
+	public List<Position> getPositions() {
+		return positions;
 	}
 
-	public void setPosition(List<Position> position) {
-		this.position = position;
+	public void setPositions(List<Position> positions) {
+		this.positions = positions;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }

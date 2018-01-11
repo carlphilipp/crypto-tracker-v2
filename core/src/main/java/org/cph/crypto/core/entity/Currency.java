@@ -29,7 +29,7 @@ public enum Currency {
 	private String symbol;
 	private Type type;
 
-	private Currency(final String code, final String currencyName, final String symbol, final Type type) {
+	Currency(final String code, final String name, final String symbol, final Type type) {
 		this.code = code;
 		this.name = name;
 		this.symbol = symbol;
