@@ -1,6 +1,6 @@
 package org.cph.crypto;
 
-import org.cph.crypto.core.User;
+import org.cph.crypto.core.entity.User;
 
 public class Main {
 	public static void main(String[] args) {

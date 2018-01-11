@@ -1,3 +1,3 @@
 module cph.core {
-	exports org.cph.crypto.core;
+	exports org.cph.crypto.core.entity;
 }
