@@ -68,7 +68,6 @@ class UpdatePositionTest {
 	@Test
 	void testUpdatePositionManualNotFound() {
 		// given
-		ArgumentCaptor<User> userCaptor = ArgumentCaptor.forClass(User.class);
 		User user = Utils.getUser();
 		user.setLiquidityMovement(1000);
 		Position newPosition = Utils.getEthPosition();
