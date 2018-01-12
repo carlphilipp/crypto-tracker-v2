@@ -1,5 +1,9 @@
 package org.cph.crypto.core.entity;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public enum Currency {
 	BTC("BTC", "Bitcoin", "฿", Type.CRYPTO),
 	ETH("ETH", "Ethereum", "Ξ", Type.CRYPTO),
@@ -50,6 +54,13 @@ public enum Currency {
 
 	public Type getType() {
 		return type;
+	}
+
+	public static List<String> cryptoCurrenciesAsListOfString() {
+		return Arrays.stream(Currency.values())
+			.filter(currency -> currency.getType() == Type.CRYPTO)
+			.map(currency -> currency.code)
+			.collect(Collectors.toList());
 	}
 
 	public enum Type {

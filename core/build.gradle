@@ -1,6 +1,6 @@
 apply plugin: 'java-library'
 
-ext.moduleName = 'cph.core'
+ext.moduleName = 'cph.crypto.core'
 
 dependencies {
 	// This dependency is exported to consumers, that is to say found on their compile classpath.

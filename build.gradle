@@ -1,6 +1,9 @@
 subprojects {
 	apply plugin: 'java'
 
+	group = 'org.cph.crypto'
+	version = app_version
+
 	sourceCompatibility = 1.9
 	targetCompatibility = 1.9
 

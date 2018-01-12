@@ -1,17 +1,16 @@
-package core.usecase.position;
+package org.cph.crypto.core.usecase.position;
 
 import org.cph.crypto.core.entity.Position;
 import org.cph.crypto.core.entity.User;
 import org.cph.crypto.core.exception.PositionNotFoundException;
 import org.cph.crypto.core.exception.UserNotFoundException;
 import org.cph.crypto.core.spi.UserRepository;
-import org.cph.crypto.core.usecase.position.UpdatePosition;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
 import java.util.Optional;
-import core.Utils;
+import org.cph.crypto.core.Utils;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

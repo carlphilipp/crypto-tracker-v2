@@ -1,3 +1,3 @@
-module cph.application {
-	requires cph.core;
+module cph.crypto.application {
+	requires cph.crypto.core;
 }
