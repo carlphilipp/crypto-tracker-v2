@@ -27,10 +27,10 @@ configurations {
 
 dependencies {
 
-	implementation project(':core')
-
 	// This dependency is used internally, and not exposed to consumers on their own compile classpath.
-	implementation (
+	implementation(
+		project(':core'),
+		project(':uuid-generator'),
 		[group: "org.springframework.boot", name: "spring-boot-starter-web"],
 		[group: "org.springframework.boot", name: "spring-boot-starter-jetty"],
 	)

@@ -1,4 +1,5 @@
 rootProject.name = 'crypto-tracker-v2'
 
-include ":core"
-include ":application"
+include ':core'
+include ':application'
+include ':uuid-generator'

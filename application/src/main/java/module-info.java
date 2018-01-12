@@ -1,5 +1,6 @@
 module cph.crypto.application {
 	requires cph.crypto.core;
+	requires cph.crypto.uuid;
 
 	requires spring.beans;
 	requires spring.core;
