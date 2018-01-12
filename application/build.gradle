@@ -32,10 +32,8 @@ dependencies {
 		project(':core'),
 		project(':uuid-generator'),
 		project(':template'),
+		project(':email'),
 		[group: "org.springframework.boot", name: "spring-boot-starter-web"],
 		[group: "org.springframework.boot", name: "spring-boot-starter-jetty"],
 	)
-
-	// Use JUnit test framework
-	testImplementation 'junit:junit:4.12'
 }

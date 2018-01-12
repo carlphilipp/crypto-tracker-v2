@@ -1,0 +1,14 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'cph.crypto.email'
+
+dependencies {
+	implementation (
+		project(':core'),
+		[group: 'javax.mail', name: 'mail', version: javax_mail_version],
+		[group: 'org.slf4j', name: 'slf4j-api', version: slf4j_version],
+		[group: 'org.jasypt', name: 'jasypt', version: jasypt_version],
+		[group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: jackson_version],
+		[group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: jackson_version],
+	)
+}
