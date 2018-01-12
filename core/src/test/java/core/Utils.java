@@ -8,6 +8,7 @@ import org.cph.crypto.core.entity.User;
 public class Utils {
 	public static User getUser() {
 		final User user = new User();
+		//user.setId("userId");
 		user.setEmail("email");
 		user.setPassword("password");
 		user.setRole(Role.USER);
