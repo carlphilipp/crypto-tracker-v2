@@ -1,0 +1,7 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'cph.crypto.template'
+
+dependencies {
+	implementation project(':core')
+}

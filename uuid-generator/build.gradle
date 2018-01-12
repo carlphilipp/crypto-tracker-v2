@@ -3,19 +3,8 @@ apply plugin: 'java-library'
 ext.moduleName = 'cph.crypto.uuid'
 
 dependencies {
-	// This dependency is exported to consumers, that is to say found on their compile classpath.
-	api 'org.apache.commons:commons-math3:3.6.1'
-
-	// This dependency is used internally, and not exposed to consumers on their own compile classpath.
 	implementation (
 		project(':core'),
 		[group: 'com.fasterxml.uuid', name: 'java-uuid-generator', version: java_uuid_generator_version],
-	)
-
-	// Use JUnit test framework
-	testImplementation(
-		[group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: junit_version],
-		[group: 'org.mockito', name: 'mockito-core', version: mockito_version],
-		[group: 'org.apiguardian', name: 'apiguardian-api', version: apiguardian_version],
 	)
 }
