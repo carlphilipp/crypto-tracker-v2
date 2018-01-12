@@ -63,6 +63,13 @@ public enum Currency {
 			.collect(Collectors.toList());
 	}
 
+	public static Currency findCurrency(final String code) {
+		return Arrays.stream(Currency.values())
+			.filter(currency -> currency.code.equals(code))
+			.findAny()
+			.orElse(UNKNOWN);
+	}
+
 	public enum Type {
 		FIAT,
 		CRYPTO

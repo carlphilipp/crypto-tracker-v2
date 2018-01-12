@@ -1,0 +1,13 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'cph.crypto.rest'
+
+dependencies {
+	implementation (
+		project(':core'),
+		[group: 'org.springframework', name: 'spring-web', version: spring_core_version],
+		[group: 'org.springframework', name: 'spring-webmvc', version: spring_core_version],
+		[group: 'org.springframework.security', name: 'spring-security-core', version: spring_security_version],
+		[group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: jackson_version],
+	)
+}

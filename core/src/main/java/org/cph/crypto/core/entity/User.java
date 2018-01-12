@@ -7,10 +7,10 @@ public class User {
 	private String id;
 	private String email;
 	private String password;
-	private Role role;
+	private Role role = Role.USER;
 	private Currency currency;
 	private double liquidityMovement;
-	private boolean allowed;
+	private boolean allowed = false;
 	private double value;
 	private double originalValue;
 	private double gain;

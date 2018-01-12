@@ -3,7 +3,7 @@ package org.cph.crypto.core.entity;
 public class Position {
 	private String id;
 	private Currency currency1;
-	private Currency currency2;
+	private Currency currency2 = Currency.USD;
 	private double quantity;
 	private double unitCostPrice;
 	private double originalValue;

@@ -33,6 +33,7 @@ dependencies {
 		project(':uuid-generator'),
 		project(':template'),
 		project(':email'),
+		project(':rest-api'),
 		[group: "org.springframework.boot", name: "spring-boot-starter-web"],
 		[group: "org.springframework.boot", name: "spring-boot-starter-jetty"],
 	)
