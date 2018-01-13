@@ -7,4 +7,7 @@ dependencies {
 		project(':core'),
 		//[group: 'org.mongodb', name: 'mongo-java-driver', version: mongodb_version],
 	)
+	implementation("org.springframework.data:spring-data-mongodb:$spring_data_mongo_version") {
+		//exclude group: 'org.mongodb', module: 'mongo-java-driver'
+	}
 }
