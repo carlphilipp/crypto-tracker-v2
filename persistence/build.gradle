@@ -1,0 +1,10 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'cph.crypto.persistence'
+
+dependencies {
+	implementation (
+		project(':core'),
+		//[group: 'org.mongodb', name: 'mongo-java-driver', version: mongodb_version],
+	)
+}

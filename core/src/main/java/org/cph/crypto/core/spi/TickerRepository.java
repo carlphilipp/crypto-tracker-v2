@@ -14,7 +14,7 @@ public interface TickerRepository {
 
 	Ticker save(Ticker ticker);
 
-	List<Ticker> save(List<Ticker> tickers);
+	void save(List<Ticker> tickers);
 
 	void deleteAll();
 }

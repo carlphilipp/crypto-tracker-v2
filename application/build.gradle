@@ -35,6 +35,7 @@ dependencies {
 		project(':email'),
 		project(':rest-api'),
 		project(':coinmarketcap'),
+		project(':persistence'),
 		[group: "org.springframework.boot", name: "spring-boot-starter-web"],
 		[group: "org.springframework.boot", name: "spring-boot-starter-jetty"],
 	)

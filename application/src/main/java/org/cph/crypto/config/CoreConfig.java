@@ -2,7 +2,6 @@ package org.cph.crypto.config;
 
 import org.cph.crypto.core.entity.Position;
 import org.cph.crypto.core.entity.ShareValue;
-import org.cph.crypto.core.entity.Ticker;
 import org.cph.crypto.core.entity.User;
 import org.cph.crypto.core.spi.ContextService;
 import org.cph.crypto.core.spi.EmailService;
@@ -24,6 +23,7 @@ import org.cph.crypto.core.usecase.user.CreateUser;
 import org.cph.crypto.core.usecase.user.FindUser;
 import org.cph.crypto.core.usecase.user.LoginUser;
 import org.cph.crypto.core.usecase.user.ValidateUser;
+import org.cph.crypto.persistence.InMemoryTickerAdapter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import java.util.List;
@@ -173,36 +173,6 @@ class CoreConfig {
 
 	@Bean
 	public TickerRepository tickerRepository() {
-		return new TickerRepository() {
-			@Override
-			public Optional<Ticker> findOne(String id) {
-				return Optional.empty();
-			}
-
-			@Override
-			public List<Ticker> findAllById(List<String> ids) {
-				return null;
-			}
-
-			@Override
-			public List<Ticker> findAllOrderByMarketCapDesc() {
-				return null;
-			}
-
-			@Override
-			public Ticker save(Ticker ticker) {
-				return null;
-			}
-
-			@Override
-			public List<Ticker> save(List<Ticker> tickers) {
-				return null;
-			}
-
-			@Override
-			public void deleteAll() {
-
-			}
-		};
+		return new InMemoryTickerAdapter();
 	}
 }
