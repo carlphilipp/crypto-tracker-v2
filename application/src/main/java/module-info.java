@@ -4,6 +4,7 @@ module cph.crypto.application {
 	requires cph.crypto.template;
 	requires cph.crypto.email;
 	requires cph.crypto.rest;
+	requires cph.crypto.client;
 
 	requires spring.beans;
 	requires spring.core;

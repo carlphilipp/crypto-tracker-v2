@@ -1,0 +1,12 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'cph.crypto.client'
+
+dependencies {
+	implementation(
+		project(':core'),
+		[group: 'org.springframework', name: 'spring-web', version: spring_core_version],
+		[group: 'org.slf4j', name: 'slf4j-api', version: slf4j_version],
+		[group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: jackson_version],
+	)
+}

@@ -1,19 +1,30 @@
 package org.cph.crypto;
 
+import org.cph.crypto.client.coinmarketcap.CoinMarketCapAdapter;
 import org.cph.crypto.core.entity.Currency;
 import org.cph.crypto.core.entity.Ticker;
-import org.cph.crypto.core.spi.*;
+import org.cph.crypto.core.spi.EmailService;
+import org.cph.crypto.core.spi.IdGenerator;
+import org.cph.crypto.core.spi.TemplateService;
+import org.cph.crypto.core.spi.TickerClient;
+import org.cph.crypto.core.spi.TickerRepository;
 import org.cph.crypto.core.usecase.ticker.UpdateTicker;
 import org.cph.crypto.email.EmailAdapter;
 import org.cph.crypto.template.TemplateAdapter;
 import org.cph.crypto.uuid.Jug;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
 import java.util.List;
 import java.util.Optional;
 
 @Configuration
 public class Config {
+
+	@Bean
+	public RestTemplate restTemplate() {
+		return new RestTemplate();
+	}
 
 	@Bean
 	public IdGenerator idGenerator() {
@@ -33,6 +44,11 @@ public class Config {
 	@Bean
 	public UpdateTicker updateTicker(TickerRepository tickerRepository, TickerClient tickerClient) {
 		return new UpdateTicker(tickerRepository, tickerClient);
+	}
+
+	@Bean
+	public TickerClient tickerClient(RestTemplate restTemplate) {
+		return new CoinMarketCapAdapter(restTemplate);
 	}
 
 	@Bean
