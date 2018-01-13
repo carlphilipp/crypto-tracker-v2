@@ -1,5 +1,7 @@
 package org.cph.crypto.client.coinmarketcap;
 
+import org.cph.crypto.client.coinmarketcap.internal.Response;
+import org.cph.crypto.client.coinmarketcap.internal.TickerMapper;
 import org.cph.crypto.core.entity.Currency;
 import org.cph.crypto.core.entity.Ticker;
 import org.cph.crypto.core.spi.TickerClient;

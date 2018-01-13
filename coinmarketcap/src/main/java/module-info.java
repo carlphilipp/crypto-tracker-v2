@@ -5,4 +5,5 @@ module cph.crypto.client {
 	requires slf4j.api;
 	requires spring.core;
 	requires spring.web;
+	requires com.fasterxml.jackson.annotation;
 }

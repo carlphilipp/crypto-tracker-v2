@@ -1,7 +1,6 @@
 package org.cph.crypto;
 
 import org.cph.crypto.client.coinmarketcap.CoinMarketCapAdapter;
-import org.cph.crypto.core.entity.Currency;
 import org.cph.crypto.core.entity.Ticker;
 import org.cph.crypto.core.spi.EmailService;
 import org.cph.crypto.core.spi.IdGenerator;
@@ -82,21 +81,6 @@ public class Config {
 			@Override
 			public void deleteAll() {
 
-			}
-		};
-	}
-
-	@Bean
-	public TickerClient tickerClient() {
-		return new TickerClient() {
-			@Override
-			public List<Ticker> getTickers(Currency currency, List<String> tickers) {
-				return null;
-			}
-
-			@Override
-			public Optional<Ticker> getTicker(Currency currency, String ticker) {
-				return Optional.empty();
 			}
 		};
 	}

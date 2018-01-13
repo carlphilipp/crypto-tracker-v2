@@ -1,11 +1,11 @@
-package org.cph.crypto.client.coinmarketcap;
+package org.cph.crypto.client.coinmarketcap.internal;
 
 import org.cph.crypto.core.entity.Currency;
 import org.cph.crypto.core.entity.Ticker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-class TickerMapper {
+public class TickerMapper {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(TickerMapper.class);
 

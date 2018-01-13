@@ -1,4 +1,4 @@
-package org.cph.crypto.client.coinmarketcap;
+package org.cph.crypto.client.coinmarketcap.internal;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

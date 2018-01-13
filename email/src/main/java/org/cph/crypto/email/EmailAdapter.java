@@ -5,11 +5,15 @@ import org.cph.crypto.core.spi.EmailService;
 import org.cph.crypto.email.config.EmailConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import javax.mail.*;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
 import java.util.Date;
 import java.util.Properties;
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 public class EmailAdapter implements EmailService {
 
@@ -45,13 +49,13 @@ public class EmailAdapter implements EmailService {
 			MimeMessage msg = new MimeMessage(session);
 			try {
 				InternetAddress addressFrom = new InternetAddress(emailProperties.getEmail().getFrom());
-				msg.setFrom((Address) addressFrom);
+				msg.setFrom(addressFrom);
 				InternetAddress[] addressTo = new InternetAddress[]{new InternetAddress(email.getTo())};
 				msg.setRecipients(Message.RecipientType.TO, addressTo);
 				msg.setSubject(email.getSubject());
 				msg.setContent(email.getContent(), "text/html");
 				msg.setSentDate(new Date());
-				Transport.send((Message) msg);
+				Transport.send(msg);
 			} catch (Exception ex) {
 				LOGGER.error(ex.getMessage(), ex);
 			}
