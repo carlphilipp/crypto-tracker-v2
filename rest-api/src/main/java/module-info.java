@@ -9,4 +9,5 @@ module cph.crypto.rest {
 	requires spring.web;
 	requires spring.webmvc;
 	requires spring.security.core;
+	requires slf4j.api;
 }

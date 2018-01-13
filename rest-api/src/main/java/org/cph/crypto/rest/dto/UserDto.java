@@ -102,7 +102,7 @@ public class UserDto {
 		this.positions = positions;
 	}
 
-	public final UserDto from(final User user) {
+	public static UserDto from(final User user) {
 		final UserDto userDto = new UserDto();
 		userDto.setId(user.getId());
 		userDto.setEmail(user.getEmail());

@@ -1,4 +1,4 @@
-package org.cph.crypto.core.usecase.position;
+package org.cph.crypto.core.usecase.sharevalue;
 
 import org.cph.crypto.core.entity.ShareValue;
 import org.cph.crypto.core.entity.Ticker;

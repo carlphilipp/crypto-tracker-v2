@@ -9,5 +9,6 @@ dependencies {
 		[group: 'org.springframework', name: 'spring-webmvc', version: spring_core_version],
 		[group: 'org.springframework.security', name: 'spring-security-core', version: spring_security_version],
 		[group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: jackson_version],
+		[group: 'org.slf4j', name: 'slf4j-api', version: slf4j_version],
 	)
 }

@@ -24,6 +24,6 @@ public class RefreshController {
 	)
 	public ResponseEntity<String> refreshAll() {
 		this.updateTicker.updateAll();
-		return new ResponseEntity<String>("{}", HttpStatus.OK);
+		return new ResponseEntity<>("{}", HttpStatus.OK);
 	}
 }

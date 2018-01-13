@@ -6,7 +6,6 @@ import org.cph.crypto.core.spi.IdGenerator;
 import org.cph.crypto.core.spi.ShareValueRepository;
 import org.cph.crypto.core.spi.TickerRepository;
 import org.cph.crypto.core.spi.UserRepository;
-import org.cph.crypto.core.usecase.position.UpdateShareValue;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
