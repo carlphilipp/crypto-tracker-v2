@@ -2,13 +2,11 @@ package org.cph.crypto.rest.controller;
 
 import org.cph.crypto.core.usecase.ticker.FindTicker;
 import org.cph.crypto.rest.dto.TickerDto;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@CrossOrigin
 @RequestMapping({"/api/ticker"})
 @RestController
 public class TickerController {
