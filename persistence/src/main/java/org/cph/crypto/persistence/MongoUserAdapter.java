@@ -6,10 +6,12 @@ import org.cph.crypto.persistence.entity.PositionDb;
 import org.cph.crypto.persistence.entity.UserDb;
 import org.cph.crypto.persistence.repository.PositionRepository;
 import org.cph.crypto.persistence.repository.UserRepository;
+import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Service
 public final class MongoUserAdapter implements org.cph.crypto.core.spi.UserRepository {
 	private final UserRepository userRepository;
 	private final PositionRepository positionRepository;

@@ -5,10 +5,12 @@ import org.cph.crypto.core.entity.User;
 import org.cph.crypto.persistence.entity.ShareValueDb;
 import org.cph.crypto.persistence.entity.UserDb;
 import org.cph.crypto.persistence.repository.ShareValueRepository;
+import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Service
 public final class MongoShareValueAdapter implements org.cph.crypto.core.spi.ShareValueRepository {
 	private final ShareValueRepository repository;
 

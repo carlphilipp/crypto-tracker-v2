@@ -3,10 +3,12 @@ package org.cph.crypto.persistence;
 import org.cph.crypto.core.entity.Ticker;
 import org.cph.crypto.persistence.entity.TickerDb;
 import org.cph.crypto.persistence.repository.TickerRepository;
+import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Service
 public final class MongoTickerAdapter implements org.cph.crypto.core.spi.TickerRepository {
 	private final TickerRepository repository;
 
