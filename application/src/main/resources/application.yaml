@@ -1,0 +1,39 @@
+spring:
+  profiles:
+    active: prod
+
+server:
+  port: 8280
+  compression:
+    enabled: true
+
+---
+
+context:
+  scheme: http
+  host: localhost
+  port: 3000
+
+spring:
+    profiles: dev
+
+logging:
+  level:
+    fr.cph.crypto: DEBUG
+    org.springframework.security: INFO
+
+---
+
+context:
+  scheme: https
+  host: stocktracker.fr
+  port: 0
+
+spring:
+    profiles: prod
+
+logging:
+  level:
+    fr.cph.crypto: INFO
+    org.springframework.security: INFO
+  file: back-end.log

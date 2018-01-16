@@ -38,5 +38,6 @@ dependencies {
 		project(':persistence'),
 		[group: "org.springframework.boot", name: "spring-boot-starter-web"],
 		[group: "org.springframework.boot", name: "spring-boot-starter-jetty"],
+		[group: "org.springframework.boot", name: "spring-boot-starter-security"],
 	)
 }

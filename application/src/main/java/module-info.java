@@ -14,4 +14,5 @@ module cph.crypto.application {
 	requires spring.webmvc;
 	requires spring.boot;
 	requires spring.boot.autoconfigure;
+	requires spring.security.core;
 }
