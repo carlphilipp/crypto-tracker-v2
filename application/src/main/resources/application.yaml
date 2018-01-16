@@ -1,3 +1,20 @@
+security:
+  signing-key: ENC(AWPPLsbbrttEUQcygv2BgY604auGJZLp8NFKMIww2H/jnzuaU14dnyC+BvoqFwhM66vozoIWvF9A49FF9ZeawsG5YUVgQxPU)
+  encoding-strength: 256
+  jwt:
+    client-id: website
+    client-secret: ENC(dkkSxjBTChvlf4pPkOlkT3xaMBokYehJDODlXS+R5KqNqXzXgLc05yO8YQJBHr1z8SGheBIxX0Wm2EZ7uXycJbSoEM8fuM7D)
+    resource-id: backendresource
+    grant-types:
+      - password
+      - client_credentials
+    scopes:
+      - read
+      - write
+  oauth2:
+    resource:
+      filter-order: 3
+
 spring:
   profiles:
     active: prod

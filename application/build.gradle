@@ -19,15 +19,17 @@ repositories {
 	maven {
 		url 'https://repo.spring.io/libs-milestone'
 	}
+	maven {
+		url 'https://repo.spring.io/libs-snapshot'
+	}
 }
 
 configurations {
 	all*.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+	all*.exclude group: 'org.jboss.spec.javax.transaction', module: 'jboss-transaction-api_1.2_spec'
 }
 
 dependencies {
-
-	// This dependency is used internally, and not exposed to consumers on their own compile classpath.
 	implementation(
 		project(':core'),
 		project(':uuid-generator'),
@@ -39,5 +41,9 @@ dependencies {
 		[group: "org.springframework.boot", name: "spring-boot-starter-web"],
 		[group: "org.springframework.boot", name: "spring-boot-starter-jetty"],
 		[group: "org.springframework.boot", name: "spring-boot-starter-security"],
+		[group: 'org.springframework.security', name: 'spring-security-jwt', version: '1.0.9.RELEASE'],
+		[group: 'org.springframework.security.oauth', name: 'spring-security-oauth2', version: '2.2.2.BUILD-SNAPSHOT'],
+		//[group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'],
+		//[group: 'org.eclipse.persistence', name: 'eclipselink', version: '2.7.0'],
 	)
 }
