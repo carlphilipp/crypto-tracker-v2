@@ -7,8 +7,6 @@ module cph.crypto.application {
 	requires cph.crypto.client;
 	requires cph.crypto.persistence;
 
-	//requires java.xml.bind;
-	//requires java.activation;
 	requires spring.beans;
 	requires spring.core;
 	requires spring.context;

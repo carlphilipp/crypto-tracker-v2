@@ -10,5 +10,7 @@ dependencies {
 		[group: 'org.jasypt', name: 'jasypt', version: jasypt_version],
 		[group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: jackson_version],
 		[group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: jackson_version],
+		[group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'],
+		[group: 'com.sun.xml.bind', name: 'jaxb-core', version: '2.2.11'],
 	)
 }
