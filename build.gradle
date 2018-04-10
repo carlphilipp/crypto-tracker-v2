@@ -4,8 +4,8 @@ subprojects {
 	group = 'org.cph.crypto'
 	version = app_version
 
-	sourceCompatibility = 1.9
-	targetCompatibility = 1.9
+	sourceCompatibility = 1.10
+	targetCompatibility = 1.10
 
 	repositories {
 		jcenter()
